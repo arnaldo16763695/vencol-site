@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<html  lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,18 +13,16 @@ import Footer from "../components/Footer.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body class="dark:bg-gray-900">
-    <main class="w-full">
-      <div class="bg-transparent md:h-28 h-16">
-
-      </div>
+  <body class="dark:bg-gray-900 min-h-screen flex flex-col">
+    <main class="flex-1">
+      <div class="bg-transparent md:h-28 h-16"></div>
       <Navbar />
       <slot />
-      <Footer />
-      <script
-        is:inline
-        src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
-      ></script>
     </main>
+    <Footer />
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
+    ></script>
   </body>
 </html>
