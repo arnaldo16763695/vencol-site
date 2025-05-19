@@ -1,0 +1,34 @@
+---
+// src/components/ThemeToggle.astro
+import { Sun, Moon } from "@lucide/astro";
+---
+<Moon
+  class="theme-toggle w-6 h-6 cursor-pointer dark:bg-gray-50 dark:hover:bg-gray-100 rounded-full dark:hidden hover:bg-gray-900 hover:text-white"
+/>
+<Sun
+  class="theme-toggle w-6 h-6 cursor-pointer dark:text-white dark:hover:bg-gray-100 dark:hover:text-gray-900 rounded-full hidden dark:block"
+/>
+
+<script is:inline>
+  const html = document.documentElement;
+
+  // Aplicar tema al cargar
+  if (
+    localStorage.theme === 'dark' ||
+    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    html.setAttribute('data-theme', 'dark');
+  } else {
+    html.setAttribute('data-theme', 'light');
+  }
+
+  // Toggle en todos los elementos con clase .theme-toggle
+  document.querySelectorAll(".theme-toggle").forEach((el) =>
+    el.addEventListener("click", () => {
+      const current = html.getAttribute("data-theme");
+      const newTheme = current === "dark" ? "light" : "dark";
+      html.setAttribute("data-theme", newTheme);
+      localStorage.theme = newTheme;
+    })
+  );
+</script>
