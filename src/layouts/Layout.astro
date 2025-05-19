@@ -1,0 +1,31 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Carousel from "../components/Carousel.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html  lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="dark:bg-gray-900">
+    <main class="w-full">
+      <div class="bg-transparent md:h-28 h-16">
+
+      </div>
+      <Navbar />
+      <Carousel />
+      <slot />
+      <Footer />
+      <script
+        is:inline
+        src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
+      ></script>
+    </main>
+  </body>
+</html>
