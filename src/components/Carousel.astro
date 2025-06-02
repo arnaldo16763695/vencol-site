@@ -2,103 +2,69 @@
 import Banner from "./Banner.astro";
 ---
 
-<div
-  id="default-carousel"
-  class="relative w-full"
-  data-carousel-interval="18000"
-  data-carousel="static"
->
+<div id="animation-carousel" class="relative w-full" data-carousel="slide" data-carousel-interval="18000">
   <!-- Carousel wrapper -->
-  <div class="relative h-56 overflow-hidden md:h-[500px]">
+  <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
     <!-- Item 1 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <div class="flex items-center justify-center">
-        <Banner
-          title="Te conectamos con el mundo"
-          description="Con Vencol tendrás tecnologia de Vanguardia para tu hogar o negocio"
-          button1={{
-            titleButton: "Solicitar servicio",
-            textBeforeButton: "Ubicanos",
-            linkButton: "#",
-            linkBeforeButton: "#",
-          }}
-          button2={{
-            titleButton: "Aquí",
-            textBeforeButton: "Ubicanos",
-            linkButton: "#",
-            linkBeforeButton: "#",
-          }}
-          image="/images/carousel/carousel-1.png"
-        />
-      </div>
+    <div class="hidden duration-200 ease-linear" data-carousel-item>
+      <Banner
+        title="Te conectamos con el mundo"
+        description="Con Vencol tendrás tecnologia de Vanguardia para tu hogar o negocio"
+        button1={{
+          titleButton: "Solicitar servicio",
+          textBeforeButton: "Ubicanos",
+          linkButton: "#",
+          linkBeforeButton: "#",
+        }}
+        button2={{
+          titleButton: "Aquí",
+          textBeforeButton: "Ubicanos",
+          linkButton: "#",
+          linkBeforeButton: "#",
+        }}
+        image="/images/carousel/carousel-1.png"
+      />
     </div>
     <!-- Item 2 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <div class="flex items-center justify-center">
-        <Banner
-          title="Somos distribuidores"
-          description="Somos distribuidores de equipos de telecomunicaciones"
-          button1={{
-            titleButton: "Solicitar servicio",
-            textBeforeButton: "Ubicanos",
-            linkButton: "#",
-            linkBeforeButton: "#",
-          }}
-          button2={{
-            titleButton: "Aquí",
-            textBeforeButton: "Ubicanos",
-            linkButton: "#",
-            linkBeforeButton: "#",
-          }}
-          image="/images/carousel/carousel-2.png"
-        />
-      </div>
+    <div class="hidden duration-200 ease-linear" data-carousel-item>
+      <Banner
+        title="Somos distribuidores"
+        description="Somos distribuidores de equipos de telecomunicaciones"
+        button1={{
+          titleButton: "Solicitar servicio",
+          textBeforeButton: "Ubicanos",
+          linkButton: "#",
+          linkBeforeButton: "#",
+        }}
+        button2={{
+          titleButton: "Aquí",
+          textBeforeButton: "Ubicanos",
+          linkButton: "#",
+          linkBeforeButton: "#",
+        }}
+        image="/images/carousel/carousel-2.png"
+      />
     </div>
     <!-- Item 3 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <div class="flex items-center justify-center">
-        <Banner
-          title="Somos tu aliado en la innovación"
-          description="Estamos siempre en constante innovación para brindarte la mejor experiencia" 
-          image="/images/carousel/carousel-2.png"
-          button1={{
-            titleButton: "Solicitar servicio",
-            textBeforeButton: "Ubicanos",
-            linkButton: "#",
-            linkBeforeButton: "#",
-          }}
-          button2={{
-            titleButton: "Aquí",
-            textBeforeButton: "Ubicanos",
-            linkButton: "#",
-            linkBeforeButton: "#",
-          }}
-        />
-      </div>
+    <div class="hidden duration-200 ease-linear" data-carousel-item="active">
+      <Banner
+        title="Somos tu aliado en la innovación"
+        description="Estamos siempre en constante innovación para brindarte la mejor experiencia"
+        image="/images/carousel/carousel-2.png"
+        button1={{
+          titleButton: "Solicitar servicio",
+          textBeforeButton: "Ubicanos",
+          linkButton: "#",
+          linkBeforeButton: "#",
+        }}
+        button2={{
+          titleButton: "Aquí",
+          textBeforeButton: "Ubicanos",
+          linkButton: "#",
+          linkBeforeButton: "#",
+        }}
+      />
     </div>
-  </div>
-  <!-- Slider indicators -->
-  <div
-    class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
-  >
-    <button
-      type="button"
-      class="w-3 h-3 rounded-full"
-      aria-current="true"
-      aria-label="Slide 1"
-      data-carousel-slide-to="0"></button>
-    <button
-      type="button"
-      class="w-3 h-3 rounded-full"
-      aria-current="false"
-      aria-label="Slide 2"
-      data-carousel-slide-to="1"></button>
-    <button
-      type="button"
-      class="w-3 h-3 rounded-full"
-      aria-current="false"
-      aria-label="Slide 3"
-      data-carousel-slide-to="2"></button>
   </div>
   <!-- Slider controls -->
   <button
@@ -107,7 +73,7 @@ import Banner from "./Banner.astro";
     data-carousel-prev
   >
     <span
-      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-300/30 dark:bg-gray-800/30 group-hover:bg-gray-400 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
     >
       <svg
         class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
@@ -132,7 +98,7 @@ import Banner from "./Banner.astro";
     data-carousel-next
   >
     <span
-      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-300/30 dark:bg-gray-800/30 group-hover:bg-gray-400 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
     >
       <svg
         class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
