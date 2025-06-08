@@ -2,11 +2,13 @@
 import Banner from "./Banner.astro";
 ---
 
-<div id="animation-carousel" class="relative w-full" data-carousel="slide" data-carousel-interval="18000">
+<div id="animation-carousel" class="relative w-full" data-carousel="static">
   <!-- Carousel wrapper -->
   <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
     <!-- Item 1 -->
     <div class="hidden duration-200 ease-linear" data-carousel-item>
+      <!-- <img src="/images/carousel/carousel-1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> -->
+
       <Banner
         title="Te conectamos con el mundo"
         description="Con Vencol tendrás tecnología de Vanguardia para tu hogar o negocio"
@@ -28,8 +30,8 @@ import Banner from "./Banner.astro";
     <!-- Item 2 -->
     <div class="hidden duration-200 ease-linear" data-carousel-item>
       <Banner
-        title="Somos distribuidores"
-        description="Somos distribuidores de equipos de telecomunicaciones"
+        title="Te conectamos con el mundo"
+        description="Con Vencol tendrás tecnologia de Vanguardia para tu hogar o negocio"
         button1={{
           titleButton: "Solicitar servicio",
           textBeforeButton: "Ubicanos",
@@ -42,27 +44,75 @@ import Banner from "./Banner.astro";
           linkButton: "#",
           linkBeforeButton: "#",
         }}
-        image="/images/carousel/carousel-2.png"
+        image="/images/carousel/carousel-1.png"
       />
     </div>
     <!-- Item 3 -->
     <div class="hidden duration-200 ease-linear" data-carousel-item="active">
       <Banner
-        title="Somos tu aliado en la innovación"
-        description="Estamos siempre en constante innovación para brindarte la mejor experiencia"
-        image="/images/carousel/carousel-2.png"
-        button1={{
-          titleButton: "Solicitar servicio",
-          textBeforeButton: "Ubicanos",
-          linkButton: "#",
-          linkBeforeButton: "#",
-        }}
-        button2={{
-          titleButton: "Aquí",
-          textBeforeButton: "Ubicanos",
-          linkButton: "#",
-          linkBeforeButton: "#",
-        }}
+      title="Te conectamos con el mundo"
+      description="Con Vencol tendrás tecnologia de Vanguardia para tu hogar o negocio"
+      button1={{
+        titleButton: "Solicitar servicio",
+        textBeforeButton: "Ubicanos",
+        linkButton: "#",
+        linkBeforeButton: "#",
+      }}
+      button2={{
+        titleButton: "Aquí",
+        textBeforeButton: "Ubicanos",
+        linkButton: "#",
+        linkBeforeButton: "#",
+      }}
+      image="/images/carousel/carousel-1.png"
+    />
+    </div>
+    <!-- Item 4 -->
+    <div class="hidden duration-200 ease-linear" data-carousel-item>
+      <Banner
+      title="Te conectamos con el mundo"
+      description="Con Vencol tendrás tecnologia de Vanguardia para tu hogar o negocio"
+      button1={{
+        titleButton: "Solicitar servicio",
+        textBeforeButton: "Ubicanos",
+        linkButton: "#",
+        linkBeforeButton: "#",
+      }}
+      button2={{
+        titleButton: "Aquí",
+        textBeforeButton: "Ubicanos",
+        linkButton: "#",
+        linkBeforeButton: "#",
+      }}
+      image="/images/carousel/carousel-1.png"
+    />
+    </div>
+    <!-- Item 5 -->
+    <div class="hidden duration-200 ease-linear" data-carousel-item>
+      <Banner
+      title="Te conectamos con el mundo"
+      description="Con Vencol tendrás tecnologia de Vanguardia para tu hogar o negocio"
+      button1={{
+        titleButton: "Solicitar servicio",
+        textBeforeButton: "Ubicanos",
+        linkButton: "#",
+        linkBeforeButton: "#",
+      }}
+      button2={{
+        titleButton: "Aquí",
+        textBeforeButton: "Ubicanos",
+        linkButton: "#",
+        linkBeforeButton: "#",
+      }}
+      image="/images/carousel/carousel-1.png"
+    />
+    </div>
+    <!-- Item 5 -->
+    <div class="hidden duration-200 ease-linear" data-carousel-item>
+      <img
+        src="/images/carousel/carousel-5.png"
+        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="..."
       />
     </div>
   </div>
@@ -73,7 +123,7 @@ import Banner from "./Banner.astro";
     data-carousel-prev
   >
     <span
-      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800/30 group-hover:bg-gray-300 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
     >
       <svg
         class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
@@ -98,7 +148,7 @@ import Banner from "./Banner.astro";
     data-carousel-next
   >
     <span
-      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800/30 group-hover:bg-gray-300 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
     >
       <svg
         class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
