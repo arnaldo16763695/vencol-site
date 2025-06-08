@@ -6,7 +6,8 @@
     "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest"
   },
   "dependencies": {
     "@astrojs/node": "^9.2.1",
@@ -15,5 +16,8 @@
     "astro": "^5.7.13",
     "flowbite": "^3.1.2",
     "tailwindcss": "^4.1.7"
+  },
+  "devDependencies": {
+    "vitest": "^1.0.0"
   }
 }
