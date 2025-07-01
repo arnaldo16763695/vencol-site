@@ -15,7 +15,7 @@
 
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Anisette';
     src: url('/fonts/Anisette/anisette-medium.woff2') format('woff2');
     font-weight: 400;
@@ -44,4 +44,4 @@
 
 html {
     font-family: 'Anisette', sans-serif;
-}
+} */
