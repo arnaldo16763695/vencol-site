@@ -1,5 +1,4 @@
 ---
-// src/components/ThemeToggle.astro
 import { Sun, Moon } from "@lucide/astro";
 ---
 <Moon
@@ -17,18 +16,22 @@ import { Sun, Moon } from "@lucide/astro";
     localStorage.theme === 'dark' ||
     (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
   ) {
-    html.setAttribute('data-theme', 'dark');
+    html.classList.add('dark');
   } else {
-    html.setAttribute('data-theme', 'light');
+    html.classList.remove('dark');
   }
 
   // Toggle en todos los elementos con clase .theme-toggle
   document.querySelectorAll(".theme-toggle").forEach((el) =>
     el.addEventListener("click", () => {
-      const current = html.getAttribute("data-theme");
-      const newTheme = current === "dark" ? "light" : "dark";
-      html.setAttribute("data-theme", newTheme);
-      localStorage.theme = newTheme;
+      const isDark = html.classList.contains('dark');
+      if (isDark) {
+        html.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        html.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
     })
   );
 </script>
