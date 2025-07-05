@@ -1,0 +1,19 @@
+---
+import { SOCIAL } from "../const/social";
+---
+
+<div class="mb-8 mt-4 flex flex-row items-center justify-center gap-x-2">
+    {
+      SOCIAL.map(({ url, image, name, label }) => (
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={label ?? name}
+          class="flex items-center dark:text-white justify-center transition hover:scale-125"
+        >
+          <image.logo />
+        </a>
+      ))
+    }
+  </div> 
