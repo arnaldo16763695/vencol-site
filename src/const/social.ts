@@ -3,6 +3,7 @@ import type { Social } from "../types/social";
 import X from "../assets/svg/x.svg";
 import Instagram from "../assets/svg/instagram.svg";
 import Facebook from "../assets/svg/facebook.svg";
+import Whatsapp from "../assets/svg/whatsapp.svg";
 
 export const SOCIAL: Social[] = [
   {
@@ -35,6 +36,18 @@ export const SOCIAL: Social[] = [
     label: "Visitar perfil de InfoLaVelada en Facebook",
     image: {
       logo: Facebook,
+      width: 200,
+      height: 200,
+    },
+  },
+
+  {
+    id: "whatsapp",
+    name: "WhatsApp",
+    url: "https://wa.me/+573104932587",
+    label: "Visitar perfil de InfoLaVelada en WhatsApp",
+    image: {
+      logo: Whatsapp,
       width: 200,
       height: 200,
     },
