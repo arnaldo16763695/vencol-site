@@ -1,0 +1,27 @@
+---
+import Map from '../assets/svg/map.svg'
+import Clock from '../assets/svg/clock.svg'
+import Phone from '../assets/svg/phone.svg'
+import Email from '../assets/svg/email.svg'
+---
+
+<section class="flex flex-col md:flex-row items-center justify-center my-4 w-full p-4 dark:text-gray-400">
+  <article class="w-full md:w-[60%] px-4 md:px-10 py-4 flex flex-col justify-center h-full md:h-[60vh]">
+    <p class="text-sm md:text-xl text-justify font-semibold mb-4">Si tienes alguna consulta o duda, no dudes en contactarnos, te responderemos lo antes posible. Puedes contactarnos por correo electronico o por whatsapp. </p>
+      <div class="p-4 w-full">
+        <div class="mb-6 flex gap-2 items-center"><div><Map class="h-6 w-auto text-[#2a1f26] md:h-7"  /></div><div><strong>CR 49 CL 46-2 centro comercial el FARO ( local 111) - San pedro de los Milagros ANT</strong></div></div>
+        <div class="mb-6 flex gap-2 items-center"><div><Clock class="h-6 w-auto text-[#2a1f26] md:h-7"  /></div><div><strong>Horario de atencion (Oficina): Lunes a Viernes de 8:00 a 17:00</strong></div></div>
+        <div class="mb-6 flex gap-2 items-center"><div><Phone class="h-6 w-auto text-[#2a1f26] md:h-7"  /></div><div><strong>Telefono: +57 310 4932587</strong></div></div>
+        <div class="mb-6 flex gap-2 items-center"><div><Email class="h-6 w-auto text-[#2a1f26] md:h-7"  /></div><div><strong>Correo: contacto@vencol.com</strong></div></div>
+      </div>
+  </article>
+  <article class="w-full md:w-[40%] p-4">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1889.0746751874672!2d-75.55784808302428!3d6.459954105780431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e443733f8d0abe9%3A0x3b688b6e64b0c6b8!2sCentro%20Comercial%20El%20Faro!5e1!3m2!1sen!2sve!4v1753563925913!5m2!1sen!2sve"
+      class="w-full h-[40vh] md:h-[60vh]"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </article>
+</section>
