@@ -21,7 +21,7 @@ export const SOCIAL: Social[] = [
   {
     id: "instagram",
     name: "Instagram",
-    url: "https://instagram.com",
+    url: "https://www.instagram.com/vencoltecnhology/",
     label: "Visitar perfil de InfoLaVelada en Instagram",
     image: {
       logo: Instagram,
@@ -32,7 +32,7 @@ export const SOCIAL: Social[] = [
   {
     id: "facebook",
     name: "Facebook",
-    url: "https://facebook.com",
+    url: "https://www.facebook.com/conectionexitosa",
     label: "Visitar perfil de InfoLaVelada en Facebook",
     image: {
       logo: Facebook,

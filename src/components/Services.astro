@@ -4,14 +4,14 @@ import Title from "./Title.astro";
 ---
 
 <section
-  class="flex flex-col items-center mt-4 min-w-[90%] md:min-w-[70%] w-full md:max-w-[70%] mx-auto"
+  class="flex flex-col items-center mt-4 min-w-[90%] md:min-w-[70%] w-full md:max-w-[70%] mx-auto mb-32"
 >
     <Title title="Servicios" />
 
   <div>
     <div class="mb-4 border-b border-gray-200 dark:border-gray-700" >
       <ul
-        class="flex flex-wrap -mb-px text-sm font-medium text-center"
+        class="flex flex-wrap -mb-px text-xs md:text-xl font-medium text-center"
         id="default-tab"
         data-tabs-toggle="#default-tab-content"
         role="tablist"
@@ -59,7 +59,7 @@ import Title from "./Title.astro";
         role="tabpanel"
         aria-labelledby="profile-tab"
       >
-        <h2 class="text-4xl font-extrabold dark:text-white text-center">
+        <h2 class="text-2xl md:text-4xl font-extrabold dark:text-white text-center">
           Conoce nuestros planes de Internet
         </h2>
         <div class="flex flex-col items-center justify-center gap-4 mt-4">
@@ -75,7 +75,7 @@ import Title from "./Title.astro";
           </div>
 
           <div class="flex items-center justify-center gap-4 mt-4">
-            <div class="min-h-96 hidden md:block">
+            <div class="min-h-96 hidden md:block w-[40%]">
               <img
                 class="rounded-t-lg w-96 h-96"
                 src="/images/services/chica_internet.png"
@@ -83,7 +83,7 @@ import Title from "./Title.astro";
               />
             </div>
             <div
-              class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 min-h-96 p-2 md:p-4"
+              class="w-[100%] md:w-[60%] grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 min-h-96 p-2 md:p-4"
             >
             <Card 
             link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20internet%2050%20Mbps" 
@@ -103,7 +103,7 @@ import Title from "./Title.astro";
           <Card 
             link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20internet%20500%20Mbps" 
             title="500 Mbps" 
-            description="Plan de 500 Mbps" 
+            description="lorem" 
           />
           
             </div>
@@ -116,7 +116,7 @@ import Title from "./Title.astro";
         role="tabpanel"
         aria-labelledby="dashboard-tab"
       >
-        <h2 class="text-4xl font-extrabold dark:text-white text-center">
+        <h2 class="text-2xl md:text-4xl font-extrabold dark:text-white text-center">
           Instalación de servicios de televisión
         </h2>
         <div class="flex flex-col items-center justify-center gap-4 mt-4">
@@ -142,9 +142,9 @@ import Title from "./Title.astro";
             <div
               class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 min-h-96 p-2 md:p-4"
             >
-              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20DirecTV" title="DirecTV" description="Plan de DirecTV" />
-              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20Claro" title="Claro" description="Plan de Claro" />
-              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20TDT" title="TDT" description="Plan de TDT" />
+              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20DirecTV" title="DirecTV" description="Servicio DirecTV" />
+              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20Claro" title="Claro" description="Servicio Claro" />
+              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20TDT" title="TDT" description="Servicio TDT" />
             </div>
           </div>
         </div>
@@ -155,7 +155,7 @@ import Title from "./Title.astro";
         role="tabpanel"
         aria-labelledby="settings-tab"
       >
-      <h2 class="text-4xl font-extrabold dark:text-white text-center">
+      <h2 class="text-2xl md:text-4xl font-extrabold dark:text-white text-center">
         Instalación de sistemas de alarmas y CCTV
       </h2>
       <div class="flex flex-col items-center justify-center gap-4 mt-4">
@@ -177,8 +177,8 @@ import Title from "./Title.astro";
             <div
               class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 min-h-96 p-2 md:p-4"
             >
-              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20alarmas" title="Alarmas" description="Plan de Alarmas" />
-              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20CCTV" title="CCTV" description="Plan de CCTV" />
+              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20alarmas" title="Alarmas" description="Servicio Alarmas" />
+              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20CCTV" title="CCTV" description="Servicio Cámaras de seguridad" />
             </div>
           </div>
       </div>
