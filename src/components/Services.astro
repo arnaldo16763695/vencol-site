@@ -56,6 +56,8 @@ import Title from "./Title.astro";
 
     <!-- content tab -->
     <div id="default-tab-content">
+
+      <!-- Internet tab -->
       <div
         class="hidden pb-0 px-4 pt-4 rounded-lg bg-gray-100 dark:bg-gray-800"
         id="internet"
@@ -113,6 +115,9 @@ import Title from "./Title.astro";
           </div>
         </div>
       </div>
+
+
+      <!-- TV tab -->
       <div
         class="hidden pb-0 px-4 pt-4  rounded-lg bg-gray-100 dark:bg-gray-800"
         id="tv"
@@ -135,7 +140,7 @@ import Title from "./Title.astro";
             </p>
           </div>
           <div class="flex items-center justify-center gap-4 mt-4">
-            <div class="min-h-96 hidden md:block">
+            <div class="min-h-96 hidden md:block md:w-[40%]">
               <img
                 class="rounded-t-lg w-96 h-96"
                 src="/images/services/chica_tv.png"
@@ -143,7 +148,7 @@ import Title from "./Title.astro";
               />
             </div>
             <div
-              class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 min-h-96 p-2 md:p-4"
+              class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 min-h-96 p-2 md:p-4 w-[100%] md:w-[60%]"
             >
               <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20DirecTV" title="DirecTV" description="Servicio DirecTV" />
               <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20Claro" title="Claro" description="Servicio Claro" />
@@ -152,56 +157,56 @@ import Title from "./Title.astro";
           </div>
         </div>
       </div>
+
+
+      <!-- Security tab -->
+
       <div
-        class="hidden pb-0 px-4 pt-4 rounded-lg bg-gray-100 dark:bg-gray-800"
-        id="security"
-        role="tabpanel"
-        aria-labelledby="security-tab"
-      >
+      class="hidden pb-0 px-4 pt-4  rounded-lg bg-gray-100 dark:bg-gray-800"
+      id="security"
+      role="tabpanel"
+      aria-labelledby="security-tab"
+    >
       <h2 class="text-2xl md:text-4xl font-extrabold dark:text-white text-center">
-        Instalación de sistemas de alarmas y CCTV
+        Instalación de servicios de televisión
       </h2>
       <div class="flex flex-col items-center justify-center gap-4 mt-4">
         <div class="w-[90%] md:w-[60%] text-justify mx-auto">
           <p class="text-sm text-gray-500 dark:text-gray-400">
             <strong class="font-medium text-gray-800 dark:text-white"
-              >Protege tu hogar o negocio con sistemas de alarmas y videovigilancia de última generación. Realizamos la instalación de cámaras y alarmas con configuración personalizada, para que tengas control y tranquilidad en todo momento.</strong
+              >Realizamos la instalación profesional de sistemas de televisión
+              como DirecTV, Claro y TDT. Te asesoramos en la selección,
+              configuración y puesta en marcha del servicio que mejor se
+              adapte a tu hogar o negocio, garantizando una conexión óptima y
+              de calidad.</strong
             >
           </p>
         </div>
         <div class="flex items-center justify-center gap-4 mt-4">
-            <div class="min-h-96 hidden md:block">
-              <img
-                class="rounded-t-lg w-96 h-96"
-                src="/images/services/chica_cam.png"
-                alt=""
-              />
-            </div>
-            <div
-              class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 min-h-96 p-2 md:p-4"
-            >
-              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20alarmas" title="Alarmas" description="Servicio Alarmas" />
-              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20CCTV" title="CCTV" description="Servicio Cámaras de seguridad" />
-            </div>
+          <div class="min-h-96 hidden md:block md:w-[40%]">
+            <img
+              class="rounded-t-lg w-96 h-96"
+              src="/images/services/chica_cam.png"
+              alt=""
+            />
           </div>
-      </div>
-      </div>
-      <div
-        class="hidden pb-0 px-4 pt-4 rounded-lg bg-gray-100 dark:bg-gray-800"
-        id="contacts"
-        role="tabpanel"
-        aria-labelledby="contacts-tab"
-      >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-          <strong class="font-medium text-gray-800 dark:text-white"
-            >Te ofrecemos 4 servicio de internet de calidad para tu empresa o tu
-            hogar. Nuestros planes son flexibles para que puedas elegir el que
-            mejor se adapte a tus necesidades.</strong
+          <div
+            class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 min-h-96 p-2 md:p-4 w-[100%] md:max-w-[60%]"
           >
-        </p>
-        <div class="flex flex-wrap items-center justify-around gap-4 mt-4">
+          <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20alarmas" title="Alarmas" description="Servicio Alarmas" />
+          <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20CCTV" title="CCTV" description="Cámaras de seguridad" />
+           
+          </div>
         </div>
       </div>
+    </div>
+
+
+
+
+
+
+      
     </div>
   </div>
 </section>
