@@ -1,16 +1,17 @@
 ---
 import Card from "./Card.astro";
+import Separator from "./Separator.astro";
 import Title from "./Title.astro";
 ---
 
 <section
   class="flex flex-col items-center mt-4 min-w-[90%] md:min-w-[70%] w-full md:max-w-[70%] mx-auto mb-16"
 >
-    <Title title="Servicios" />
+  <Title title="Servicios" />
 
   <div>
     <!-- Links tab  -->
-    <div class="mb-4 border-b border-gray-200 dark:border-gray-700" >
+    <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
       <ul
         class="flex flex-wrap -mb-px text-xs md:text-xl font-medium text-center"
         id="default-tab"
@@ -50,13 +51,11 @@ import Title from "./Title.astro";
             aria-selected="false">Sistemas de seguridad</button
           >
         </li>
-   
       </ul>
     </div>
 
     <!-- content tab -->
     <div id="default-tab-content">
-
       <!-- Internet tab -->
       <div
         class="hidden pb-0 px-4 pt-4 rounded-lg bg-gray-100 dark:bg-gray-800"
@@ -64,7 +63,9 @@ import Title from "./Title.astro";
         role="tabpanel"
         aria-labelledby="internet-tab"
       >
-        <h2 class="text-2xl md:text-4xl font-extrabold dark:text-white text-center">
+        <h2
+          class="text-2xl md:text-4xl font-extrabold dark:text-white text-center"
+        >
           Conoce nuestros planes de Internet
         </h2>
         <div class="flex flex-col items-center justify-center gap-4 mt-4">
@@ -79,7 +80,7 @@ import Title from "./Title.astro";
             </p>
           </div>
 
-          <div class="flex items-center justify-center gap-4 mt-4">
+          <div class="w-full flex items-center justify-center gap-4 mt-4">
             <div class="min-h-96 hidden md:block w-[40%]">
               <img
                 class="rounded-t-lg w-96 h-96"
@@ -88,43 +89,103 @@ import Title from "./Title.astro";
               />
             </div>
             <div
-              class="w-[100%] md:w-[60%] grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 min-h-96 p-2 md:p-4"
+              class="flex flex-col w-[100%] md:w-[60%] gap-2 md:gap-4 min-h-96 p-2 md:p-4"
             >
-            <Card 
-            link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20internet%2050%20Mbps" 
-            title="50 Mbps" 
-            description="Plan de 50 Mbps" 
-          />
-          <Card 
-            link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20internet%20100%20Mbps" 
-            title="100 Mbps" 
-            description="Plan de 100 Mbps" 
-          />
-          <Card 
-            link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20internet%20200%20Mbps" 
-            title="200 Mbps" 
-            description="Plan de 200 Mbps" 
-          />
-          <Card 
-            link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20internet%20500%20Mbps" 
-            title="500 Mbps" 
-            description="lorem" 
-          />
-          
+              <h2
+                class="text-xl md:text-2xl font-bold dark:text-white text-left w-full"
+              >
+                Internet Zonas Rurales
+              </h2>
+
+              <div class="flex justify-start md:justify-center gap-2 p-2 border border-gray-200 dark:border-gray-700 rounded-lg">
+                <div class="flex flex-col justify-between gap-2 p-2 w-[70%] border border-gray-200 dark:border-gray-700 rounded-lg">
+                  <h3
+                    class="mb-2 text-center text-xl md:text-xl lg:text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+                  >
+                    Planes desde:
+                  </h3>
+                  <ul
+                    class="list-disc list-inside ml-0 md:ml-2 mb-2 text-xl md:text-xl lg:text-xl tracking-tight text-gray-900 dark:text-white"
+                  >
+                    <li class="mb-2">10 mbps </li>
+                    <li class="mb-2">12 mbps</li>
+                    <li class="mb-2">15 mbps</li>
+                    <li class="mb-2">20 mbps</li>
+                    <li class="mb-2">30 mbps</li>
+                  </ul>
+                  <a href="https://wa.me/573104932587?text=Hola%20me%20gustaria%20saber%20mas%20acerca%20de%20los%20planes%20de%20Internet%20rurales" class="w-[80%] md:w-[30%] inline-flex items-center px-3 py-2 text-xs md:text-sm lg:text-base font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                    Saber más
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+                </div>
+                              
+              </div>  
+              <Separator/>
+              <h2
+                class="text-xl md:text-2xl font-bold dark:text-white text-left w-full "
+              >
+                Internet Zonas Urbanas
+              </h2>
+              <div class="flex justify-between gap-2 p-2 border border-gray-200 dark:border-gray-700 rounded-lg">
+                <div class="flex flex-col justify-between gap-2 p-2 w-[50%] border border-gray-200 dark:border-gray-700 rounded-lg">
+                  <h3
+                    class="mb-2 text-center text-xl md:text-xl lg:text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+                  >
+                    <span class="hidden md:block">Plan</span> Hogar
+                  </h3>
+                  <ul
+                    class="list-disc list-inside ml-2 mb-2 text-xl md:text-xl lg:text-xl tracking-tight text-gray-900 dark:text-white"
+                  >
+                  <li class="mb-2">25 mbps </li>
+                    <li class="mb-2">30 mbps</li>
+                    <li class="mb-2">40 mbps</li>
+                    <li class="mb-2">50 mbps</li>
+                  </ul>
+                  <a href="https://wa.me/573104932587?text=Hola%20me%20gustaria%20saber%20mas%20acerca%20de%20los%20planes%20de%20Internet%20Hogar" class="w-[100%] md:w-[40%] inline-flex items-center px-3 py-2 text-xs md:text-sm lg:text-base font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                    Saber más
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+                </div>
+                <div class="flex flex-col justify-between gap-2 p-2 w-[50%] border border-gray-200 dark:border-gray-700 rounded-lg">
+                  <h3
+                    class="mb-2 text-center text-xl md:text-xl lg:text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+                  >
+                    <span class="hidden md:block">Plan</span> Corporativo
+                  </h3>
+                  <ul
+                    class="list-disc list-inside ml-2 mb-2 text-xl md:text-xl lg:text-xl tracking-tight text-gray-900 dark:text-white"
+                  >
+                    <li class="mb-2">50 mbps </li>
+                    <li class="mb-2">60 mbps</li>
+                    <li class="mb-2">80 mbps</li>
+                  </ul>
+                  <a href="https://wa.me/573104932587?text=Hola%20me%20gustaria%20saber%20mas%20acerca%20de%20los%20planes%20de%20Internet%20Corporativo" class="w-[100%] md:w-[40%] inline-flex items-center px-3 py-2 text-xs md:text-sm lg:text-base font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                    Saber más
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+                </div>                
+              </div>  
             </div>
           </div>
         </div>
       </div>
 
-
       <!-- TV tab -->
       <div
-        class="hidden pb-0 px-4 pt-4  rounded-lg bg-gray-100 dark:bg-gray-800"
+        class="hidden pb-0 px-4 pt-4 rounded-lg bg-gray-100 dark:bg-gray-800"
         id="tv"
         role="tabpanel"
         aria-labelledby="tv-tab"
       >
-        <h2 class="text-2xl md:text-4xl font-extrabold dark:text-white text-center">
+        <h2
+          class="text-2xl md:text-4xl font-extrabold dark:text-white text-center"
+        >
           Instalación de servicios de televisión
         </h2>
         <div class="flex flex-col items-center justify-center gap-4 mt-4">
@@ -150,63 +211,76 @@ import Title from "./Title.astro";
             <div
               class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 min-h-96 p-2 md:p-4 w-[100%] md:w-[60%]"
             >
-              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20DirecTV" title="DirecTV" description="Servicio DirecTV" />
-              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20Claro" title="Claro" description="Servicio Claro" />
-              <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20TDT" title="TDT" description="Servicio TDT" />
+              <Card
+                link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20DirecTV"
+                title="DirecTV"
+                description="Servicio DirecTV"
+              />
+              <Card
+                link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20Claro"
+                title="Claro"
+                description="Servicio Claro"
+              />
+              <Card
+                link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20televisi%C3%B3n%20TDT"
+                title="TDT"
+                description="Servicio TDT"
+              />
             </div>
           </div>
         </div>
       </div>
 
-
       <!-- Security tab -->
 
       <div
-      class="hidden pb-0 px-4 pt-4  rounded-lg bg-gray-100 dark:bg-gray-800"
-      id="security"
-      role="tabpanel"
-      aria-labelledby="security-tab"
-    >
-      <h2 class="text-2xl md:text-4xl font-extrabold dark:text-white text-center">
-        Instalación de servicios de televisión
-      </h2>
-      <div class="flex flex-col items-center justify-center gap-4 mt-4">
-        <div class="w-[90%] md:w-[60%] text-justify mx-auto">
-          <p class="text-sm text-gray-500 dark:text-gray-400">
-            <strong class="font-medium text-gray-800 dark:text-white"
-              >Realizamos la instalación profesional de sistemas de televisión
-              como DirecTV, Claro y TDT. Te asesoramos en la selección,
-              configuración y puesta en marcha del servicio que mejor se
-              adapte a tu hogar o negocio, garantizando una conexión óptima y
-              de calidad.</strong
-            >
-          </p>
-        </div>
-        <div class="flex items-center justify-center gap-4 mt-4">
-          <div class="min-h-96 hidden md:block md:w-[40%]">
-            <img
-              class="rounded-t-lg w-96 h-96"
-              src="/images/services/chica_cam.png"
-              alt=""
-            />
+        class="hidden pb-0 px-4 pt-4 rounded-lg bg-gray-100 dark:bg-gray-800"
+        id="security"
+        role="tabpanel"
+        aria-labelledby="security-tab"
+      >
+        <h2
+          class="text-2xl md:text-4xl font-extrabold dark:text-white text-center"
+        >
+          Instalación de servicios de televisión
+        </h2>
+        <div class="flex flex-col items-center justify-center gap-4 mt-4">
+          <div class="w-[90%] md:w-[60%] text-justify mx-auto">
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              <strong class="font-medium text-gray-800 dark:text-white"
+                >Realizamos la instalación profesional de sistemas de televisión
+                como DirecTV, Claro y TDT. Te asesoramos en la selección,
+                configuración y puesta en marcha del servicio que mejor se
+                adapte a tu hogar o negocio, garantizando una conexión óptima y
+                de calidad.</strong
+              >
+            </p>
           </div>
-          <div
-            class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 min-h-96 p-2 md:p-4 w-[100%] md:max-w-[60%]"
-          >
-          <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20alarmas" title="Alarmas" description="Servicio Alarmas" />
-          <Card link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20CCTV" title="CCTV" description="Cámaras de seguridad" />
-           
+          <div class="flex items-center justify-center gap-4 mt-4">
+            <div class="min-h-96 hidden md:block md:w-[40%]">
+              <img
+                class="rounded-t-lg w-96 h-96"
+                src="/images/services/chica_cam.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 min-h-96 p-2 md:p-4 w-[100%] md:max-w-[60%]"
+            >
+              <Card
+                link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20alarmas"
+                title="Alarmas"
+                description="Servicio Alarmas"
+              />
+              <Card
+                link="https://wa.me/573104932587?text=Hola%2C%20me%20gustaria%20contratar%20un%20plan%20de%20CCTV"
+                title="CCTV"
+                description="Cámaras de seguridad"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-
-
-
-
-
-      
     </div>
   </div>
 </section>
