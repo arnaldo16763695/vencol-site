@@ -4,10 +4,10 @@ WORKDIR /app
 COPY . .
 
 RUN npm install
-RUN VERCEL=0 npm run build  # Forzamos build Node standalone
+RUN npm run build
 
 ENV HOST=0.0.0.0
 ENV PORT=4321
+ENV VERCEL=0
 EXPOSE 4321
-
-CMD ["node", "./dist/server/entry.mjs"]
+CMD node ./dist/server/entry.mjs
