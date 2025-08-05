@@ -1,97 +1,40 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Title from "../components/Title.astro";
+
+const images = [
+  "/images/gallery/1.jpg",
+  "/images/gallery/2.jpg",
+  "/images/gallery/3.jpg",
+  "/images/gallery/4.jpg",
+  "/images/gallery/5.jpg",
+  "/images/gallery/6.jpg",
+  "/images/gallery/7.jpg",
+  "/images/gallery/8.jpg",
+  "/images/gallery/9.jpg",
+  "/images/gallery/10.jpg",
+  "/images/gallery/11.jpg",
+  "/images/gallery/12.jpg",
+  "/images/gallery/13.jpg",
+  "/images/gallery/14.jpg",
+  "/images/gallery/15.jpg",
+  "/images/gallery/16.jpg",
+  "/images/gallery/17.jpg",
+];
 ---
 
 <Layout>
-  <section class="flex flex-col items-center p-4 ">
+  <section class="flex flex-col items-center p-4">
     <Title title="Galería de imágenes" />
 
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-      <a href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg">
-        <img
-          class="h-auto max-w-full rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg"
-          alt=""
-        />
-      </a>
-      <a href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg">
-        <img
-          class="h-auto max-w-full rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
-          alt=""
-        />
-      </a>
-      <a href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg">
-        <img
-          class="h-auto max-w-full rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
-          alt=""
-        />
-      </a>
-      <a href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg">
-        <img
-          class="h-auto max-w-full rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
-          alt=""
-        />
-      </a>
-      <a href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg">
-        <img
-          class="h-auto max-w-full rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
-          alt=""
-        />
-      </a>
-      <a href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg">
-        <img
-          class="h-auto max-w-full rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
-          alt=""
-        />
-      </a>
-      <a href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg">
-        <img
-          class="h-auto max-w-full rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg"
-          alt=""
-        />
-      </a>
-      <a href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg">
-        <img
-          class="h-auto max-w-full rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg"
-          alt=""
-        />
-      </a>
-      <a href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg">
-        <img
-          class="h-auto max-w-full rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg"
-          alt=""
-        />
-      </a>
-      <a href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg">
-        <img
-          class="h-auto max-w-full rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg"
-          alt=""
-        />
-      </a>
-      <a href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg">
-        <img
-          class="h-auto max-w-full rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg"
-          alt=""
-        />
-      </a>
-      <a href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg">
-        <img
-          class="h-auto max-w-full rounded-lg"
-          src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg"
-          alt=""
-        />
-      </a>
+      {
+        images.map((image) => (
+          <a href={image}>
+            <img class="h-auto max-w-full rounded-lg" src={image} alt="" />
+          </a>
+        ))
+      }
     </div>
   </section>
 </Layout>
