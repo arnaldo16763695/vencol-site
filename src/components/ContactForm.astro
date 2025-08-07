@@ -43,7 +43,7 @@
 
     <form action="#" class="space-y-8 contact-form">
       <div
-        class="hidden contact-form-response items-center p-4 mb-4 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-800"
+        class="hidden   contact-form-response items-center p-4 mb-4 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-800"
         role="alert"
       >
         <svg
@@ -60,7 +60,7 @@
         <span class="sr-only">Info</span>
         <div>
           <span class="font-medium">Éxito!</span>
-          Tu mensaje se envio correctamente
+          Tu mensaje se envio correctamente, te contactaremos lo antes posible. Gracias por tu mensaje.
         </div>
       </div>
       <div
@@ -138,8 +138,10 @@
           console.log(json);
           $loader.classList.add("hidden");
           $response.classList.remove("hidden");
+          $loader.classList.add("flex");
           setTimeout(() => {
-            $response.classList.add("hidden");
+          $response.classList.remove("flex");
+          $response.classList.add("hidden");
           }, 3000);
           $form.reset();
         })
