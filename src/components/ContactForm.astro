@@ -2,30 +2,160 @@
 
 ---
 
-<section class="flex flex-col md:flex-row items-center bg-transparent dark:bg-gray-900 w-full mt-10">
-    <!-- Contenedor de imagen -->
-    <div class="hidden md:flex justify-end items-center h-[80vh] md:w-1/2 w-full p-4 overflow-hidden">
-      <img src="/images/about/contact.png" alt="Contáctanos" class="w-full h-full object-contain" />
-    </div>
-  
-    <!-- Contenedor del formulario -->
-    <div class="h-auto md:h-[80vh] w-full md:w-1/2 p-8 lg:py-16 mx-auto max-w-screen-md flex flex-col justify-center">
-      <p class="text-2xl font-semibold p-6 text-center dark:text-white">Envíanos un mensaje</p>
-      <form action="#" class="space-y-8">
+<section
+  class="flex flex-col md:flex-row items-center bg-transparent dark:bg-gray-900 w-full mt-10"
+>
+  <!-- Contenedor de imagen -->
+  <div
+    class="hidden md:flex justify-end items-center h-[80vh] md:w-1/2 w-full p-4 overflow-hidden"
+  >
+    <img
+      src="/images/about/contact.png"
+      alt="Contáctanos"
+      class="w-full h-full object-contain"
+    />
+  </div>
+  <div role="status" class="hidden contact-form-loader">
+    <svg
+      aria-hidden="true"
+      class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+      viewBox="0 0 100 101"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+        fill="currentColor"></path>
+      <path
+        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+        fill="currentFill"></path>
+    </svg>
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  <!-- Contenedor del formulario -->
+  <div
+    class="h-auto md:h-[80vh] w-full md:w-1/2 p-8 lg:py-16 mx-auto max-w-screen-md flex flex-col justify-center relative"
+  >
+    <p class="text-2xl font-semibold p-6 text-center dark:text-white">
+      Envíanos un mensaje
+    </p>
+
+    <form action="#" class="space-y-8 contact-form">
+      <div
+        class="hidden contact-form-response items-center p-4 mb-4 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-800"
+        role="alert"
+      >
+        <svg
+          class="shrink-0 inline w-4 h-4 me-3"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"
+          ></path>
+        </svg>
+        <span class="sr-only">Info</span>
         <div>
-          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tu correo</label>
-          <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required>
+          <span class="font-medium">Éxito!</span>
+          Tu mensaje se envio correctamente
         </div>
-        <div>
-          <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Asunto</label>
-          <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Escribe el asunto..." required>
-        </div>
-        <div class="sm:col-span-2">
-          <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tu mensaje</label>
-          <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Escribe tu mensaje..."></textarea>
-        </div>
-        <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Enviar</button>
-      </form>
-    </div>
-  </section>
-  
+      </div>
+      <div
+        class="hidden contact-form-error p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+        role="alert"
+      >
+        <span class="font-medium">Error!</span> Change a few things up and try submitting
+        again.
+      </div>
+      <div>
+        <label
+          for="email"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >Tu correo</label
+        >
+        <input
+          type="email"
+          id="email"
+          class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+          placeholder="name@flowbite.com"
+          required
+        />
+      </div>
+      <div>
+        <label
+          for="subject"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >Asunto</label
+        >
+        <input
+          type="text"
+          id="subject"
+          class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+          placeholder="Escribe el asunto..."
+          required
+        />
+      </div>
+      <div class="sm:col-span-2">
+        <label
+          for="message"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+          >Tu mensaje</label
+        >
+        <textarea
+          id="message"
+          rows="6"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+          placeholder="Escribe tu mensaje..."></textarea>
+      </div>
+      <button
+        type="submit"
+        class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+        >Enviar</button
+      >
+    </form>
+  </div>
+</section>
+<script>
+  ((d) => {
+    const $form = d.querySelector(".contact-form") as HTMLFormElement,
+      $loader = d.querySelector(".contact-form-loader") as HTMLDivElement,
+      $response = d.querySelector(".contact-form-response") as HTMLDivElement,
+      $error = d.querySelector(".contact-form-error") as HTMLDivElement;
+
+    $form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      $loader.classList.remove("hidden");
+
+      fetch("https://formsubmit.co/ajax/arnaldoespinoza1@hotmail.com", {
+        method: "POST",
+        body: new FormData(e.target as HTMLFormElement),
+      })
+        .then((res) => (res.ok ? res.json() : Promise.reject(res)))
+        .then((json) => {
+          console.log(json);
+          $loader.classList.add("hidden");
+          $response.classList.remove("hidden");
+          setTimeout(() => {
+            $response.classList.add("hidden");
+          }, 3000);
+          $form.reset();
+        })
+        .catch((err) => {
+          console.log(err);
+          $error.classList.remove("hidden");
+          setTimeout(() => {
+            $error.classList.add("hidden");
+          }, 3000);
+        })
+        .finally(() => {
+          $loader.classList.add("none");
+          setTimeout(() => {
+            location.hash = "close";
+          }, 3000);
+        });
+    });
+  })(document);
+</script>
