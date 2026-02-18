@@ -10,12 +10,16 @@ import Footer from "../components/Footer.astro";
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#111827" />
     <meta name="generator" content={Astro.generator} />
     <title>Vencol Technology. Soluciones de tecnología para tu hogar y negocio</title>
     <meta name="description" content="Vencol Technology. Soluciones de tecnología para tu hogar y negocio" />
   </head>
   <body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex flex-col">
-    <main class="flex-1 px-2 md:px-0 pt-[140px] ">
+    <a href="#contenido-principal" class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:m-4 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-gray-900">
+      Saltar al contenido principal
+    </a>
+    <main id="contenido-principal" class="flex-1 px-2 md:px-0 pt-[140px]" tabindex="-1">
       <!-- <div class="bg-transparent md:h-[136px] h-28"></div> -->
       <Navbar />
       <slot />
