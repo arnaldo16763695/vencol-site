@@ -30,9 +30,15 @@ const images = [
 
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
       {
-        images.map((image) => (
-          <a href={image}>
-            <img class="h-auto max-w-full rounded-lg" src={image} alt="" />
+        images.map((image, index) => (
+          <a href={image} aria-label={`Abrir imagen de proyecto ${index + 1}`}>
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src={image}
+              alt={`Fotografía de proyecto ${index + 1}`}
+              loading="lazy"
+              decoding="async"
+            />
           </a>
         ))
       }
