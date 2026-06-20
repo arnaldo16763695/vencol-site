@@ -3,6 +3,9 @@ import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Analytics from '@vercel/analytics/astro'
 import Footer from "../components/Footer.astro";
+import Whatsapp from "../assets/svg/whatsapp.svg";
+
+const whatsappUrl = "https://wa.me/573104932587";
 ---
 
 <html lang="es">
@@ -25,6 +28,20 @@ import Footer from "../components/Footer.astro";
       <slot />
       <Analytics />
     </main>
+    <div class="group fixed bottom-6 right-6 z-50 md:bottom-8 md:right-8">
+      <span class="pointer-events-none absolute bottom-full right-0 mb-3 translate-y-1 rounded-full bg-gray-900 px-4 py-2 text-center text-xs font-medium text-white opacity-0 shadow-md transition duration-200 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100 dark:bg-white dark:text-gray-900">
+        Escribenos por WhatsApp
+      </span>
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir conversación por WhatsApp"
+        class="flex rounded-full bg-[#25D366] p-2.5 text-white shadow-lg transition-transform duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 animate-[pulse_2.8s_ease-in-out_infinite] [&_svg]:h-10 [&_svg]:w-10 md:p-3 md:[&_svg]:h-12 md:[&_svg]:w-12"
+      >
+        <Whatsapp />
+      </a>
+    </div>
     <Footer />
     <script
       is:inline
